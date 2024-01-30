@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:practice/common/extensions/context_colors_extension.dart';
 import 'package:practice/counter_cubit/counter_cubit.dart';
 import 'package:practice/counter_cubit/counter_state.dart';
 import 'package:practice/lock_cubit/lock_cubit.dart';
@@ -65,8 +66,8 @@ class HomeView extends StatelessWidget {
               builder: (context, state) {
                 return Container(
                   alignment: Alignment.center,
-                  decoration: const BoxDecoration(
-                      color: Color(0xFFEAA2EC), shape: BoxShape.circle),
+                  decoration:  BoxDecoration(
+                      color: context.theme.counterBgColor, shape: BoxShape.circle),
                   height: 50,
                   width: 50,
                   child: Text(
